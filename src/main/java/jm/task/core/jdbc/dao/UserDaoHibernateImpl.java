@@ -70,9 +70,9 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        Session session = sessionFactory.openSession();
-        List<User> list = session.createCriteria(User.class).list();
-        return list;
+        try (Session session = sessionFactory.openSession()) {
+            return session.createQuery("From " + User.class.getName()).list();
+        }
     }
 
     @Override
