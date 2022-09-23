@@ -5,7 +5,6 @@ import jm.task.core.jdbc.util.Util;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
@@ -13,9 +12,7 @@ public class UserDaoHibernateImpl implements UserDao {
     SessionFactory sessionFactory = Util.getSessionFactory();
 
     public UserDaoHibernateImpl() {
-
     }
-
 
     @Override
     public void createUsersTable() {
@@ -52,7 +49,6 @@ public class UserDaoHibernateImpl implements UserDao {
         session.save(user);
         session.getTransaction().commit();
         System.out.println("пользователь с именем " + name + " сохранен в БД");
-
     }
 
     @Override
@@ -65,7 +61,6 @@ public class UserDaoHibernateImpl implements UserDao {
         transaction.commit();
         session.close();
         System.out.println("Пользователь под id №" + id + " был удален");
-
     }
 
     @Override

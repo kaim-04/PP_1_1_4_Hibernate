@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="jm.task.core.jdbc.model.TestEntity" table="test" schema="mydbtest">
+    <class name="jm.task.core.jdbc.model.User" table="test" schema="mydbtest">
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
